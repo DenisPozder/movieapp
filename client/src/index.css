@@ -1,0 +1,70 @@
+@import url('https://fonst.googleapis.com/css?family=Roboto:300,400,500');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.linear-bg {
+    background: linear-gradient(269.82deg, #07091c00 0.17%, #080a1ad6 99.87%);
+}
+
+.hoveres {
+    @apply hidden;
+}
+
+.hovered:hover .hoveres {
+    @apply flex-colo;
+}
+
+.flex-colo {
+    @apply flex flex-col justify-center items-center;
+}
+
+.flex-rows {
+    @apply flex flex-row justify-center items-center;
+}
+
+.flex-btn {
+    @apply flex justify-between items-center;
+}
+
+.transitions {
+    @apply transition duration-500 ease-in-out;
+}
+
+.zIndex {
+    z-index: 1000;
+}
+
+/* Drawer */
+.drawer {
+    overflow: visible;
+}
+
+.drawer .drawer-content-wrapper {
+    width: 100%;
+}
+
+.drawer {
+    position: fixed;
+    z-index: 9999;
+    transition: width 0s ease 0.3s, height 0s ease 0.3s,
+    transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+}
+
+.drawer>\* {
+    transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
+    opacity 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
+    box-shadow 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+}
+
+
